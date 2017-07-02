@@ -16,10 +16,10 @@
     TEMP(12); TEMP(13); TEMP(14); TEMP(15);
 
 const float dividendf = DIVIDEND;
-const float half = 127. / 256;
 const float dividendfi = 1.0 / DIVIDEND;
 
 // rdtsc
+// https://www.mcs.anl.gov/~kazutomo/rdtsc.html
 
 #if defined(__i386__)
 
@@ -189,6 +189,7 @@ static inline void g128 ( unsigned int* arr )
 
 static inline void g ( unsigned int* arr, int n )
 {
+    // https://stackoverflow.com/questions/6867693/change-floating-point-rounding-mode
     // store the original rounding mode
     const int originalRounding = fegetround( );
     // establish the desired rounding mode
