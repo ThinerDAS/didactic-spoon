@@ -120,7 +120,7 @@ static inline void g8 ( unsigned int* arr )
 
 static inline void g128_s ( unsigned int* arr )
 {
-    // arr[0..63] <= dividend/arr[0..63]
+    // arr[0..127] <= dividend/arr[0..127]
     // use avx2
 #define REPS REP16
     // prepare dividend
@@ -145,7 +145,7 @@ static inline void g128_s ( unsigned int* arr )
 
 static inline void g128 ( unsigned int* arr )
 {
-    // arr[0..63] <= dividend/arr[0..63]
+    // arr[0..127] <= dividend/arr[0..127]
     // use avx2
 #define REPS REP16
     // prepare dividend
